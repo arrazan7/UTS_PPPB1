@@ -13,7 +13,11 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val yourName = intent.getStringExtra(LoginActivity.EXTRA_USERNAME)
+
         with(binding){
+
+            username.text = yourName
 
             movie1.setOnClickListener {
                 val intentToDetailActivity =

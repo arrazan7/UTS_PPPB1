@@ -9,7 +9,6 @@ import com.example.uts.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    val savedUsername = "fayyadh"
     val savedPassword = "rahasia"
 
     companion object{
@@ -32,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                     Intent(this@LoginActivity, HomeActivity::class.java)
                 intentToHomeActivity.putExtra(EXTRA_USERNAME,loginUser)
 
-                if (loginUser == savedUsername && loginPass == savedPassword) {
+                if (loginPass == savedPassword) {
                     startActivity(intentToHomeActivity)
                 } else {
                     // Login salah, tampilkan pesan kesalahan
